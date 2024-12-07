@@ -1,1 +1,177 @@
 // custom SCSS (or CSS) goes here
+
+body {
+    font-size: 14px;
+}
+
+// Slider start
+
+.slider {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    color: #5c5962;
+    padding: 15px;
+}
+
+.prev {
+    left: -15px;
+    top: 50%;
+}
+
+.next {
+    right: -15px;
+    top: 50%;
+}
+
+// Slider end
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.column {
+    padding: 10px;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-top: 1.5em;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        text-align: center;
+        margin: 0;
+        margin-bottom: -1em !important;
+        padding: 0;
+
+        h2 {
+            margin: 0;
+        }
+    }
+
+    .row>* {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+// Search start
+
+.search-input-wrap {
+    box-shadow: none;
+}
+
+.search-results {
+    box-shadow: none;
+}
+
+.search-button {
+    box-shadow: none;
+}
+
+.search-active {
+    .search-input-wrap {
+        @include mq(md) {
+            box-shadow: none
+        }
+    }
+}
+
+// Search end
+
+// Code start
+
+[class^="language-"]:not(.language-plaintext) {
+    background-color: #fff;
+    border: 1px solid #e1e4e8;
+    border-radius: 12px;
+    padding: 6px;
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+    overflow-x: auto;
+}
+
+.highlight,
+.highlight pre {
+    background: #fff;
+}
+
+pre {
+    margin: 0;
+}
+
+code {
+    font-size: 12px !important;
+    color: #333;
+}
+
+.k,
+.kt,
+.nl,
+.mi {
+    color: #d73a49 !important;
+}
+
+.nc {
+    color: #6f42c1 !important;
+}
+
+.n {
+    color: #333 !important;
+}
+
+.p,
+.o {
+    color: #24292f !important;
+}
+
+// Code end
